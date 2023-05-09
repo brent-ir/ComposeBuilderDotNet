@@ -83,6 +83,13 @@ namespace ComposeBuilderDotNet.Builders
             WorkingObject.Image = image;
             return this;
         }
+        
+        public ServiceBuilder WithMemoryLimit(string memLimit)
+        {
+            WorkingObject.MemoryLimit = memLimit;
+            return this;
+        }
+
 
         public ServiceBuilder WithNetworks(params string[] networks)
         {

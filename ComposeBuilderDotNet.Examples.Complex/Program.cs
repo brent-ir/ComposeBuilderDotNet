@@ -29,6 +29,7 @@ namespace ComposeBuilderDotNet.Examples.Complex
 
             var mysql = Builder.MakeService("db")
                 .WithImage("mysql:5.7")
+                .WithMemoryLimit("500m")
                 .WithNetworks(network1)
                 .WithExposed("3306") 
                 .WithEnvironment(mb => mb

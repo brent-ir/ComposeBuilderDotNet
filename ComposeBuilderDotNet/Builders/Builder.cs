@@ -14,7 +14,7 @@
 
         public static ComposeBuilder MakeCompose()
         {
-            return new ComposeBuilder().WithVersion("3.7");
+            return new ComposeBuilder().WithVersion("3.8");
         }
          
         public static VolumeBuilder MakeVolume()

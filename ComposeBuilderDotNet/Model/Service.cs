@@ -12,6 +12,12 @@ namespace ComposeBuilderDotNet.Model
             get => GetProperty<string>("container_name");
             set => SetProperty("container_name", value);
         }
+        
+        public string MemoryLimit
+        {
+            get => GetProperty<string>("mem-limit");
+            set => SetProperty("mem-limit", value);
+        }
 
         public string Image
         {
