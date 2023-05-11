@@ -50,20 +50,21 @@ namespace ComposeBuilderDotNet.Examples.Complex
                 .WithImage("wordpress:latest")
                 .WithBuild("../../", "myDockerFile.txt")
                 .WithNetworks(network1, network2)
-                .WithPortMapping("8000:80") 
+                .WithPortMapping("8000:80")
                 .WithEnvironment(mb => mb
                     .WithProperty("WORDPRESS_DB_HOST", $"{mysql.Name}:3306")
                     .WithProperty("WORDPRESS_DB_USER", dbUser)
                     .WithProperty("WORDPRESS_DB_PASSWORD", dbPass)
                     .WithProperty("WORDPRESS_DB_NAME", dbName)
                 )
-                .WithDependencies(mysql) 
-                .WithRestartPolicy(ERestartMode.UnlessStopped) 
+                .WithDependencies(mysql)
+                .WithRestartPolicy(ERestartMode.UnlessStopped)
                 .WithSwarm()
                 .WithDeploy(d => d
                     .WithMode(EReplicationMode.Global) 
                 )
                 .WithSecrets(secret1)
+                .WithLogJsonFile("1M", 10)
                 .Build();
 
             var compose = Builder.MakeCompose()

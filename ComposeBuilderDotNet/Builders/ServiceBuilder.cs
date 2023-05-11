@@ -92,6 +92,19 @@ namespace ComposeBuilderDotNet.Builders
             WorkingObject.Build = build;
             return this;
         }
+
+        
+        public ServiceBuilder WithLogJsonFile(string maximumFileSize, int maximumFileCount)
+        {
+            var log = new Logging();
+            log.Driver = "json-file";
+            var options = new LoggingsJsonFileOptions();
+            options.MaximumFileCount = maximumFileCount.ToString();
+            options.MaximumFileSize = maximumFileSize;
+            log.Options = options;
+            WorkingObject.Logging = log;
+            return this;
+        }
         
         public ServiceBuilder WithMemoryLimit(string memLimit)
         {

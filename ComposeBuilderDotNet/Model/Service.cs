@@ -18,6 +18,11 @@ namespace ComposeBuilderDotNet.Model
             get => GetProperty<Build>("build");
             set => SetProperty("build", value);
         }
+        public Logging Logging
+        {
+            get => GetProperty<Logging>("logging");
+            set => SetProperty("logging", value);
+        }        
         
         public string MemoryLimit
         {
