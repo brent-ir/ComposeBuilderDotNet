@@ -83,6 +83,15 @@ namespace ComposeBuilderDotNet.Builders
             WorkingObject.Image = image;
             return this;
         }
+
+        public ServiceBuilder WithBuild(string context, string dockerFile)
+        {
+            var build = new Build();
+            build.Context = context;
+            build.DockerFile = dockerFile;
+            WorkingObject.Build = build;
+            return this;
+        }
         
         public ServiceBuilder WithMemoryLimit(string memLimit)
         {

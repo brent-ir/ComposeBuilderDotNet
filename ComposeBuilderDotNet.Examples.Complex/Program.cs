@@ -48,6 +48,7 @@ namespace ComposeBuilderDotNet.Examples.Complex
 
             var wordpress = Builder.MakeService("wordpress")
                 .WithImage("wordpress:latest")
+                .WithBuild("../../", "myDockerFile.txt")
                 .WithNetworks(network1, network2)
                 .WithPortMapping("8000:80") 
                 .WithEnvironment(mb => mb

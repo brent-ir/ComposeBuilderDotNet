@@ -16,8 +16,6 @@ namespace ComposeBuilderDotNet.Builders
         /// <summary>
         ///     Add services to the Compose object
         /// </summary>
-        /// <param name="services"></param>
-        /// <returns></returns>
         public ComposeBuilder WithServices(params Service[] services)
         {
             if (WorkingObject.Services == null)
@@ -41,8 +39,6 @@ namespace ComposeBuilderDotNet.Builders
         /// <summary>
         ///     Add networks to the compose object
         /// </summary>
-        /// <param name="networks"></param>
-        /// <returns></returns>
         public ComposeBuilder WithNetworks(params Network[] networks)
         {
             if (WorkingObject.Networks == null)

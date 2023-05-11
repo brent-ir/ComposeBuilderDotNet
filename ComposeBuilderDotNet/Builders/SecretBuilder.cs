@@ -3,6 +3,7 @@ using ComposeBuilderDotNet.Model;
 
 namespace ComposeBuilderDotNet.Builders
 {
+
     public class SecretBuilder : BuilderBase<SecretBuilder, Secret>
     {
         internal SecretBuilder()

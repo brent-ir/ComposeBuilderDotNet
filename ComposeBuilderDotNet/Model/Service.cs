@@ -12,6 +12,12 @@ namespace ComposeBuilderDotNet.Model
             get => GetProperty<string>("container_name");
             set => SetProperty("container_name", value);
         }
+
+        public Build Build
+        {
+            get => GetProperty<Build>("build");
+            set => SetProperty("build", value);
+        }
         
         public string MemoryLimit
         {
