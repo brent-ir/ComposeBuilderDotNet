@@ -13,9 +13,9 @@
     <PackageId>ComposeBuilderDotNet</PackageId>
     <Product>ComposeBuilderDotNet</Product>
     <Copyright>2019</Copyright>
-    <Version>1.0.4</Version>
-    <AssemblyVersion>1.0.4.0</AssemblyVersion>
-    <FileVersion>1.0.4.0</FileVersion>
+    <Version>1.0.5</Version>
+    <AssemblyVersion>1.0.5.0</AssemblyVersion>
+    <FileVersion>1.0.5.0</FileVersion>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <LangVersion>7.1</LangVersion>
     <RepositoryUrl>https://github.com/ddolyniuk1/ComposeBuilderDotNet</RepositoryUrl>
@@ -24,11 +24,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="YamlDotNet" Version="13.1.0" />
+    <Compile Remove="Properties\**" />
+    <EmbeddedResource Remove="Properties\**" />
+    <None Remove="Properties\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <PackageReference Include="YamlDotNet" Version="13.1.0" />
   </ItemGroup>
  
 </Project>
