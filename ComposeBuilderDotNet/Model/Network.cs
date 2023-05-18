@@ -7,4 +7,15 @@ namespace ComposeBuilderDotNet.Model
     public class Network : ObjectBase
     {
     }
+
+    [Serializable]
+    public class DefaultNetwork:ObjectBase
+    {
+          public Network Default
+        {
+            get => GetProperty<Network>("default");
+            set => SetProperty("default", value);
+        }
+    }
+
 }

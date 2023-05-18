@@ -24,6 +24,13 @@ namespace ComposeBuilderDotNet.Model
             get => GetProperty<Dictionary<string, Network>>("networks");
             set => SetProperty("networks", value);
         }
+
+        // Hack model
+        public DefaultNetwork NetworkDefault
+        {
+            get => GetProperty<DefaultNetwork>("networks");
+            set => SetProperty("networks", value);
+        }
          
         public Dictionary<string, Secret> Secrets
         {

@@ -5,6 +5,7 @@ using System.Reflection;
 using ComposeBuilderDotNet.Builders;
 using ComposeBuilderDotNet.Enums;
 using ComposeBuilderDotNet.Extensions;
+using ComposeBuilderDotNet.Model;
 
 namespace ComposeBuilderDotNet.Examples.Complex
 {
@@ -67,9 +68,17 @@ namespace ComposeBuilderDotNet.Examples.Complex
                 .WithLogJsonFile("1M", 10)
                 .Build();
 
+            var defaultNetwork = new DefaultNetwork();
+            defaultNetwork.Default = Builder
+                                        .MakeNetwork()
+                                        .WithProperty("name", "ignores-name")
+                                        .WithProperty("external", "true")
+                                        .Build();
+
             var compose = Builder.MakeCompose()
                 .WithServices(mysql, wordpress)
                 .WithNetworks(network1, network2)
+                .WithProperty("networks",defaultNetwork)
                 .WithSecrets(secret1)
                 .Build();
 

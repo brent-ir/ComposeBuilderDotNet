@@ -10,7 +10,7 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseUrl></PackageLicenseUrl>
     <Description>The goal of this project is to generate docker-compose literate YAML in C# using the builder design pattern</Description>
-    <PackageId>ComposeBuilderDotNet</PackageId>
+    <PackageId>IrComposeBuilderDotNet</PackageId>
     <Product>ComposeBuilderDotNet</Product>
     <Copyright>2019</Copyright>
     <Version>1.0.5</Version>
